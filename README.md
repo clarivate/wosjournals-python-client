@@ -1,4 +1,4 @@
-# wos-journals-client-py
+# Web of Science Journals API Python client
 This API provides journal-level metadata and metrics for all journals in the Journal Citation Reports™ covered in the Web of Science Core Collection, including the Journal Impact Factor™ and other new metrics. Integrate journal data into your internal systems or retrieve journal indicators for bibliometrics studies.
 
 ## Resources
