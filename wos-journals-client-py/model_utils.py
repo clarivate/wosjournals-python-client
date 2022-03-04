@@ -18,7 +18,7 @@ import tempfile
 
 from dateutil.parser import parse
 
-from wos-journals-client-py.exceptions import (
+from wosjournalsclientpy.exceptions import (
     ApiKeyError,
     ApiAttributeError,
     ApiTypeError,

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.search_match import SearchMatch
+import wosjournalsclientpy
+from wosjournalsclientpy.model.search_match import SearchMatch
 
 
 class TestSearchMatch(unittest.TestCase):

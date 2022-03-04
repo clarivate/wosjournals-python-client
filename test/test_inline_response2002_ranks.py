@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_ranks_esi_citations import InlineResponse2002RanksEsiCitations
-from wos-journals-client-py.model.inline_response2002_ranks_jif import InlineResponse2002RanksJif
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_ranks_esi_citations import InlineResponse2002RanksEsiCitations
+from wosjournalsclientpy.model.inline_response2002_ranks_jif import InlineResponse2002RanksJif
 globals()['InlineResponse2002RanksEsiCitations'] = InlineResponse2002RanksEsiCitations
 globals()['InlineResponse2002RanksJif'] = InlineResponse2002RanksJif
-from wos-journals-client-py.model.inline_response2002_ranks import InlineResponse2002Ranks
+from wosjournalsclientpy.model.inline_response2002_ranks import InlineResponse2002Ranks
 
 
 class TestInlineResponse2002Ranks(unittest.TestCase):

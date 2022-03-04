@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.metadata import Metadata
+import wosjournalsclientpy
+from wosjournalsclientpy.model.metadata import Metadata
 
 
 class TestMetadata(unittest.TestCase):

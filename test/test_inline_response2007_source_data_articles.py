@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2007_source_data_articles import InlineResponse2007SourceDataArticles
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2007_source_data_articles import InlineResponse2007SourceDataArticles
 
 
 class TestInlineResponse2007SourceDataArticles(unittest.TestCase):

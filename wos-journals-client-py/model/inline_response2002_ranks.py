@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from wos-journals-client-py.model_utils import (  # noqa: F401
+from wosjournalsclientpy.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -27,8 +27,8 @@ from wos-journals-client-py.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
-    from wos-journals-client-py.model.inline_response2002_ranks_esi_citations import InlineResponse2002RanksEsiCitations
-    from wos-journals-client-py.model.inline_response2002_ranks_jif import InlineResponse2002RanksJif
+    from wosjournalsclientpy.model.inline_response2002_ranks_esi_citations import InlineResponse2002RanksEsiCitations
+    from wosjournalsclientpy.model.inline_response2002_ranks_jif import InlineResponse2002RanksJif
     globals()['InlineResponse2002RanksEsiCitations'] = InlineResponse2002RanksEsiCitations
     globals()['InlineResponse2002RanksJif'] = InlineResponse2002RanksJif
 

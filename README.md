@@ -112,13 +112,13 @@ Python >= 3.6
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/Clarivate-SAR/wos-journals-client-py.git
+pip install git+https://github.com/Clarivate-SAR/wosjournalsclientpy.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/Clarivate-SAR/wos-journals-client-py.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/Clarivate-SAR/wosjournalsclientpy.git`)
 
 Then import the package:
 ```python
-import wos-journals-client-py
+import wosjournalsclientpy
 ```
 
 ### Setuptools
@@ -132,7 +132,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import wos-journals-client-py
+import wosjournalsclientpy
 ```
 
 ## Getting Started
@@ -142,17 +142,17 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import wos-journals-client-py
+import wosjournalsclientpy
 from pprint import pprint
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2005 import InlineResponse2005
-from wos-journals-client-py.model.inline_response2006 import InlineResponse2006
-from wos-journals-client-py.model.inline_response2007 import InlineResponse2007
-from wos-journals-client-py.model.inline_response2008 import InlineResponse2008
-from wos-journals-client-py.model.inline_response2009 import InlineResponse2009
+from wosjournalsclientpy.api import categories_api
+from wosjournalsclientpy.model.inline_response2005 import InlineResponse2005
+from wosjournalsclientpy.model.inline_response2006 import InlineResponse2006
+from wosjournalsclientpy.model.inline_response2007 import InlineResponse2007
+from wosjournalsclientpy.model.inline_response2008 import InlineResponse2008
+from wosjournalsclientpy.model.inline_response2009 import InlineResponse2009
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -169,7 +169,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     q = "q_example" # str | Free-text search by category name.  Search logic is described in the section [Search](#search). (optional)
@@ -182,7 +182,7 @@ limit = 10 # int | Number of returned results, ranging from 0 to 50 (optional) (
         # Search and filter across the journal categories
         api_response = api_instance.categories_get(q=q, edition=edition, jcr_year=jcr_year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling CategoriesApi->categories_get: %s\n" % e)
 ```
 
@@ -289,21 +289,21 @@ Class | Method | HTTP request | Description
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in wos-journals-client-py.apis and wos-journals-client-py.models may fail with a
+If the OpenAPI document is large, imports in wosjournalsclientpy.apis and wosjournalsclientpy.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from wos-journals-client-py.api.default_api import DefaultApi`
-- `from wos-journals-client-py.model.pet import Pet`
+- `from wosjournalsclientpy.api.default_api import DefaultApi`
+- `from wosjournalsclientpy.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import wos-journals-client-py
-from wos-journals-client-py.apis import *
-from wos-journals-client-py.models import *
+import wosjournalsclientpy
+from wosjournalsclientpy.apis import *
+from wosjournalsclientpy.models import *
 ```
 

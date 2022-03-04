@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2007_category_data_cited import InlineResponse2007CategoryDataCited
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2007_category_data_cited import InlineResponse2007CategoryDataCited
 
 
 class TestInlineResponse2007CategoryDataCited(unittest.TestCase):

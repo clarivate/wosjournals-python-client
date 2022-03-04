@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_ranks_esi_citations import InlineResponse2002RanksEsiCitations
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_ranks_esi_citations import InlineResponse2002RanksEsiCitations
 
 
 class TestInlineResponse2002RanksEsiCitations(unittest.TestCase):

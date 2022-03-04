@@ -17,7 +17,7 @@ from urllib.parse import urlencode
 
 import urllib3
 
-from wos-journals-client-py.exceptions import ApiException, UnauthorizedException, ForbiddenException, NotFoundException, ServiceException, ApiValueError
+from wosjournalsclientpy.exceptions import ApiException, UnauthorizedException, ForbiddenException, NotFoundException, ServiceException, ApiValueError
 
 
 logger = logging.getLogger(__name__)

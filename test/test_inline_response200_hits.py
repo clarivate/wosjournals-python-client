@@ -11,18 +11,18 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response200_categories import InlineResponse200Categories
-from wos-journals-client-py.model.inline_response200_journal_citation_reports import InlineResponse200JournalCitationReports
-from wos-journals-client-py.model.inline_response200_metrics import InlineResponse200Metrics
-from wos-journals-client-py.model.inline_response200_ranks import InlineResponse200Ranks
-from wos-journals-client-py.model.search_match import SearchMatch
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response200_categories import InlineResponse200Categories
+from wosjournalsclientpy.model.inline_response200_journal_citation_reports import InlineResponse200JournalCitationReports
+from wosjournalsclientpy.model.inline_response200_metrics import InlineResponse200Metrics
+from wosjournalsclientpy.model.inline_response200_ranks import InlineResponse200Ranks
+from wosjournalsclientpy.model.search_match import SearchMatch
 globals()['InlineResponse200Categories'] = InlineResponse200Categories
 globals()['InlineResponse200JournalCitationReports'] = InlineResponse200JournalCitationReports
 globals()['InlineResponse200Metrics'] = InlineResponse200Metrics
 globals()['InlineResponse200Ranks'] = InlineResponse200Ranks
 globals()['SearchMatch'] = SearchMatch
-from wos-journals-client-py.model.inline_response200_hits import InlineResponse200Hits
+from wosjournalsclientpy.model.inline_response200_hits import InlineResponse200Hits
 
 
 class TestInlineResponse200Hits(unittest.TestCase):

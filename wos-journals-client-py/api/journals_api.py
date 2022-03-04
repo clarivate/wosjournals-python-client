@@ -11,8 +11,8 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from wos-journals-client-py.api_client import ApiClient, Endpoint as _Endpoint
-from wos-journals-client-py.model_utils import (  # noqa: F401
+from wosjournalsclientpy.api_client import ApiClient, Endpoint as _Endpoint
+from wosjournalsclientpy.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
     date,
@@ -21,11 +21,11 @@ from wos-journals-client-py.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from wos-journals-client-py.model.inline_response200 import InlineResponse200
-from wos-journals-client-py.model.inline_response2001 import InlineResponse2001
-from wos-journals-client-py.model.inline_response2002 import InlineResponse2002
-from wos-journals-client-py.model.inline_response2003 import InlineResponse2003
-from wos-journals-client-py.model.inline_response2004 import InlineResponse2004
+from wosjournalsclientpy.model.inline_response200 import InlineResponse200
+from wosjournalsclientpy.model.inline_response2001 import InlineResponse2001
+from wosjournalsclientpy.model.inline_response2002 import InlineResponse2002
+from wosjournalsclientpy.model.inline_response2003 import InlineResponse2003
+from wosjournalsclientpy.model.inline_response2004 import InlineResponse2004
 
 
 class JournalsApi(object):

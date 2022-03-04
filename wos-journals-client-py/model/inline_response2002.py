@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from wos-journals-client-py.model_utils import (  # noqa: F401
+from wosjournalsclientpy.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -27,12 +27,12 @@ from wos-journals-client-py.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
-    from wos-journals-client-py.model.inline_response2002_journal import InlineResponse2002Journal
-    from wos-journals-client-py.model.inline_response2002_journal_data import InlineResponse2002JournalData
-    from wos-journals-client-py.model.inline_response2002_journal_profile import InlineResponse2002JournalProfile
-    from wos-journals-client-py.model.inline_response2002_metrics import InlineResponse2002Metrics
-    from wos-journals-client-py.model.inline_response2002_ranks import InlineResponse2002Ranks
-    from wos-journals-client-py.model.inline_response2002_source_data import InlineResponse2002SourceData
+    from wosjournalsclientpy.model.inline_response2002_journal import InlineResponse2002Journal
+    from wosjournalsclientpy.model.inline_response2002_journal_data import InlineResponse2002JournalData
+    from wosjournalsclientpy.model.inline_response2002_journal_profile import InlineResponse2002JournalProfile
+    from wosjournalsclientpy.model.inline_response2002_metrics import InlineResponse2002Metrics
+    from wosjournalsclientpy.model.inline_response2002_ranks import InlineResponse2002Ranks
+    from wosjournalsclientpy.model.inline_response2002_source_data import InlineResponse2002SourceData
     globals()['InlineResponse2002Journal'] = InlineResponse2002Journal
     globals()['InlineResponse2002JournalData'] = InlineResponse2002JournalData
     globals()['InlineResponse2002JournalProfile'] = InlineResponse2002JournalProfile

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2005_hits import InlineResponse2005Hits
-from wos-journals-client-py.model.metadata import Metadata
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2005_hits import InlineResponse2005Hits
+from wosjournalsclientpy.model.metadata import Metadata
 globals()['InlineResponse2005Hits'] = InlineResponse2005Hits
 globals()['Metadata'] = Metadata
-from wos-journals-client-py.model.inline_response2005 import InlineResponse2005
+from wosjournalsclientpy.model.inline_response2005 import InlineResponse2005
 
 
 class TestInlineResponse2005(unittest.TestCase):

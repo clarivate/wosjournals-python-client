@@ -14,5 +14,5 @@
 #   sys.setrecursionlimit(n)
 
 # Import APIs into API package:
-from wos-journals-client-py.api.categories_api import CategoriesApi
-from wos-journals-client-py.api.journals_api import JournalsApi
+from wosjournalsclientpy.api.categories_api import CategoriesApi
+from wosjournalsclientpy.api.journals_api import JournalsApi

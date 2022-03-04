@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2001_categories import InlineResponse2001Categories
-from wos-journals-client-py.model.inline_response2001_journal_citation_reports import InlineResponse2001JournalCitationReports
-from wos-journals-client-py.model.inline_response2001_open_access import InlineResponse2001OpenAccess
-from wos-journals-client-py.model.inline_response2001_publisher import InlineResponse2001Publisher
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2001_categories import InlineResponse2001Categories
+from wosjournalsclientpy.model.inline_response2001_journal_citation_reports import InlineResponse2001JournalCitationReports
+from wosjournalsclientpy.model.inline_response2001_open_access import InlineResponse2001OpenAccess
+from wosjournalsclientpy.model.inline_response2001_publisher import InlineResponse2001Publisher
 globals()['InlineResponse2001Categories'] = InlineResponse2001Categories
 globals()['InlineResponse2001JournalCitationReports'] = InlineResponse2001JournalCitationReports
 globals()['InlineResponse2001OpenAccess'] = InlineResponse2001OpenAccess
 globals()['InlineResponse2001Publisher'] = InlineResponse2001Publisher
-from wos-journals-client-py.model.inline_response2001 import InlineResponse2001
+from wosjournalsclientpy.model.inline_response2001 import InlineResponse2001
 
 
 class TestInlineResponse2001(unittest.TestCase):

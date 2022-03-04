@@ -15,7 +15,7 @@ import sys
 import urllib3
 
 from http import client as http_client
-from wos-journals-client-py.exceptions import ApiValueError
+from wosjournalsclientpy.exceptions import ApiValueError
 
 
 JSON_SCHEMA_VALIDATION_KEYWORDS = {
@@ -89,7 +89,7 @@ class Configuration(object):
 
     You can programmatically set the cookie:
 
-conf = wos-journals-client-py.Configuration(
+conf = wosjournalsclientpy.Configuration(
     api_key={'cookieAuth': 'abc123'}
     api_key_prefix={'cookieAuth': 'JSESSIONID'}
 )
@@ -152,7 +152,7 @@ conf = wos-journals-client-py.Configuration(
         self.logger = {}
         """Logging Settings
         """
-        self.logger["package_logger"] = logging.getLogger("wos-journals-client-py")
+        self.logger["package_logger"] = logging.getLogger("wosjournalsclientpy")
         self.logger["urllib3_logger"] = logging.getLogger("urllib3")
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'
         """Log format

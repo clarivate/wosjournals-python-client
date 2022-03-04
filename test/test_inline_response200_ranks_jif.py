@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response200_ranks_jif import InlineResponse200RanksJif
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response200_ranks_jif import InlineResponse200RanksJif
 
 
 class TestInlineResponse200RanksJif(unittest.TestCase):

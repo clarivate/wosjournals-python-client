@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response200_metrics_impact_metrics import InlineResponse200MetricsImpactMetrics
-from wos-journals-client-py.model.inline_response200_metrics_source_metrics import InlineResponse200MetricsSourceMetrics
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response200_metrics_impact_metrics import InlineResponse200MetricsImpactMetrics
+from wosjournalsclientpy.model.inline_response200_metrics_source_metrics import InlineResponse200MetricsSourceMetrics
 globals()['InlineResponse200MetricsImpactMetrics'] = InlineResponse200MetricsImpactMetrics
 globals()['InlineResponse200MetricsSourceMetrics'] = InlineResponse200MetricsSourceMetrics
-from wos-journals-client-py.model.inline_response200_metrics import InlineResponse200Metrics
+from wosjournalsclientpy.model.inline_response200_metrics import InlineResponse200Metrics
 
 
 class TestInlineResponse200Metrics(unittest.TestCase):

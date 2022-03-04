@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from wos-journals-client-py.model_utils import (  # noqa: F401
+from wosjournalsclientpy.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -27,10 +27,10 @@ from wos-journals-client-py.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
-    from wos-journals-client-py.model.inline_response2001_categories import InlineResponse2001Categories
-    from wos-journals-client-py.model.inline_response2001_journal_citation_reports import InlineResponse2001JournalCitationReports
-    from wos-journals-client-py.model.inline_response2001_open_access import InlineResponse2001OpenAccess
-    from wos-journals-client-py.model.inline_response2001_publisher import InlineResponse2001Publisher
+    from wosjournalsclientpy.model.inline_response2001_categories import InlineResponse2001Categories
+    from wosjournalsclientpy.model.inline_response2001_journal_citation_reports import InlineResponse2001JournalCitationReports
+    from wosjournalsclientpy.model.inline_response2001_open_access import InlineResponse2001OpenAccess
+    from wosjournalsclientpy.model.inline_response2001_publisher import InlineResponse2001Publisher
     globals()['InlineResponse2001Categories'] = InlineResponse2001Categories
     globals()['InlineResponse2001JournalCitationReports'] = InlineResponse2001JournalCitationReports
     globals()['InlineResponse2001OpenAccess'] = InlineResponse2001OpenAccess

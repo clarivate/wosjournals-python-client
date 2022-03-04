@@ -20,10 +20,10 @@ from urllib.parse import quote
 from urllib3.fields import RequestField
 
 
-from wos-journals-client-py import rest
-from wos-journals-client-py.configuration import Configuration
-from wos-journals-client-py.exceptions import ApiTypeError, ApiValueError, ApiException
-from wos-journals-client-py.model_utils import (
+from wosjournalsclientpy import rest
+from wosjournalsclientpy.configuration import Configuration
+from wosjournalsclientpy.exceptions import ApiTypeError, ApiValueError, ApiException
+from wosjournalsclientpy.model_utils import (
     ModelNormal,
     ModelSimple,
     ModelComposed,

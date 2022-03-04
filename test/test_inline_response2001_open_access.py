@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2001_open_access import InlineResponse2001OpenAccess
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2001_open_access import InlineResponse2001OpenAccess
 
 
 class TestInlineResponse2001OpenAccess(unittest.TestCase):

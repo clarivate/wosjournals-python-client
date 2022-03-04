@@ -13,15 +13,15 @@
 __version__ = "1.0.0"
 
 # import ApiClient
-from wos-journals-client-py.api_client import ApiClient
+from wosjournalsclientpy.api_client import ApiClient
 
 # import Configuration
-from wos-journals-client-py.configuration import Configuration
+from wosjournalsclientpy.configuration import Configuration
 
 # import exceptions
-from wos-journals-client-py.exceptions import OpenApiException
-from wos-journals-client-py.exceptions import ApiAttributeError
-from wos-journals-client-py.exceptions import ApiTypeError
-from wos-journals-client-py.exceptions import ApiValueError
-from wos-journals-client-py.exceptions import ApiKeyError
-from wos-journals-client-py.exceptions import ApiException
+from wosjournalsclientpy.exceptions import OpenApiException
+from wosjournalsclientpy.exceptions import ApiAttributeError
+from wosjournalsclientpy.exceptions import ApiTypeError
+from wosjournalsclientpy.exceptions import ApiValueError
+from wosjournalsclientpy.exceptions import ApiKeyError
+from wosjournalsclientpy.exceptions import ApiException

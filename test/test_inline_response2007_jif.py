@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2007_jif_aggregate import InlineResponse2007JifAggregate
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2007_jif_aggregate import InlineResponse2007JifAggregate
 globals()['InlineResponse2007JifAggregate'] = InlineResponse2007JifAggregate
-from wos-journals-client-py.model.inline_response2007_jif import InlineResponse2007Jif
+from wosjournalsclientpy.model.inline_response2007_jif import InlineResponse2007Jif
 
 
 class TestInlineResponse2007Jif(unittest.TestCase):

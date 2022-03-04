@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2007_frequency import InlineResponse2007Frequency
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2007_frequency import InlineResponse2007Frequency
 
 
 class TestInlineResponse2007Frequency(unittest.TestCase):

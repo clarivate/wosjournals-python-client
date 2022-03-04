@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from wos-journals-client-py.model_utils import (  # noqa: F401
+from wosjournalsclientpy.model_utils import (  # noqa: F401
     ApiTypeError,
     ModelComposed,
     ModelNormal,
@@ -27,10 +27,10 @@ from wos-journals-client-py.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
-    from wos-journals-client-py.model.inline_response2002_journal_profile_citable_items import InlineResponse2002JournalProfileCitableItems
-    from wos-journals-client-py.model.inline_response2002_journal_profile_citations import InlineResponse2002JournalProfileCitations
-    from wos-journals-client-py.model.inline_response2002_journal_profile_occurrence_countries import InlineResponse2002JournalProfileOccurrenceCountries
-    from wos-journals-client-py.model.inline_response2002_journal_profile_occurrence_organizations import InlineResponse2002JournalProfileOccurrenceOrganizations
+    from wosjournalsclientpy.model.inline_response2002_journal_profile_citable_items import InlineResponse2002JournalProfileCitableItems
+    from wosjournalsclientpy.model.inline_response2002_journal_profile_citations import InlineResponse2002JournalProfileCitations
+    from wosjournalsclientpy.model.inline_response2002_journal_profile_occurrence_countries import InlineResponse2002JournalProfileOccurrenceCountries
+    from wosjournalsclientpy.model.inline_response2002_journal_profile_occurrence_organizations import InlineResponse2002JournalProfileOccurrenceOrganizations
     globals()['InlineResponse2002JournalProfileCitableItems'] = InlineResponse2002JournalProfileCitableItems
     globals()['InlineResponse2002JournalProfileCitations'] = InlineResponse2002JournalProfileCitations
     globals()['InlineResponse2002JournalProfileOccurrenceCountries'] = InlineResponse2002JournalProfileOccurrenceCountries

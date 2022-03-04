@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2007_immediacy import InlineResponse2007Immediacy
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2007_immediacy import InlineResponse2007Immediacy
 
 
 class TestInlineResponse2007Immediacy(unittest.TestCase):

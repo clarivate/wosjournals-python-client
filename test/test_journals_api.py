@@ -10,8 +10,8 @@
 
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.api.journals_api import JournalsApi  # noqa: E501
+import wosjournalsclientpy
+from wosjournalsclientpy.api.journals_api import JournalsApi  # noqa: E501
 
 
 class TestJournalsApi(unittest.TestCase):
