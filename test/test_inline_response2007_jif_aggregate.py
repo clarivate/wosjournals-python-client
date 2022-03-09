@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2007_jif_aggregate import InlineResponse2007JifAggregate
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2007_jif_aggregate import InlineResponse2007JifAggregate
 
 
 class TestInlineResponse2007JifAggregate(unittest.TestCase):

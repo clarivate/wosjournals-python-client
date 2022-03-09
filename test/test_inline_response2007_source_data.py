@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_source_data_articles import InlineResponse2002SourceDataArticles
-from wos-journals-client-py.model.inline_response2007_source_data_articles import InlineResponse2007SourceDataArticles
-from wos-journals-client-py.model.inline_response2007_source_data_reviews import InlineResponse2007SourceDataReviews
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_source_data_articles import InlineResponse2002SourceDataArticles
+from wosjournalsclientpy.model.inline_response2007_source_data_articles import InlineResponse2007SourceDataArticles
+from wosjournalsclientpy.model.inline_response2007_source_data_reviews import InlineResponse2007SourceDataReviews
 globals()['InlineResponse2002SourceDataArticles'] = InlineResponse2002SourceDataArticles
 globals()['InlineResponse2007SourceDataArticles'] = InlineResponse2007SourceDataArticles
 globals()['InlineResponse2007SourceDataReviews'] = InlineResponse2007SourceDataReviews
-from wos-journals-client-py.model.inline_response2007_source_data import InlineResponse2007SourceData
+from wosjournalsclientpy.model.inline_response2007_source_data import InlineResponse2007SourceData
 
 
 class TestInlineResponse2007SourceData(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_journal import InlineResponse2002Journal
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_journal import InlineResponse2002Journal
 
 
 class TestInlineResponse2002Journal(unittest.TestCase):

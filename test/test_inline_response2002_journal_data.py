@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_journal_data_cited import InlineResponse2002JournalDataCited
-from wos-journals-client-py.model.inline_response2002_journal_data_citing import InlineResponse2002JournalDataCiting
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_journal_data_cited import InlineResponse2002JournalDataCited
+from wosjournalsclientpy.model.inline_response2002_journal_data_citing import InlineResponse2002JournalDataCiting
 globals()['InlineResponse2002JournalDataCited'] = InlineResponse2002JournalDataCited
 globals()['InlineResponse2002JournalDataCiting'] = InlineResponse2002JournalDataCiting
-from wos-journals-client-py.model.inline_response2002_journal_data import InlineResponse2002JournalData
+from wosjournalsclientpy.model.inline_response2002_journal_data import InlineResponse2002JournalData
 
 
 class TestInlineResponse2002JournalData(unittest.TestCase):

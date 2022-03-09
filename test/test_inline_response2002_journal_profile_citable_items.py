@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_journal_profile_citable_items import InlineResponse2002JournalProfileCitableItems
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_journal_profile_citable_items import InlineResponse2002JournalProfileCitableItems
 
 
 class TestInlineResponse2002JournalProfileCitableItems(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_journal_profile_occurrence_organizations import InlineResponse2002JournalProfileOccurrenceOrganizations
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_journal_profile_occurrence_organizations import InlineResponse2002JournalProfileOccurrenceOrganizations
 
 
 class TestInlineResponse2002JournalProfileOccurrenceOrganizations(unittest.TestCase):

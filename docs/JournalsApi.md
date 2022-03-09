@@ -1,4 +1,4 @@
-# wos-journals-client-py.JournalsApi
+# wosjournalsclientpy.JournalsApi
 
 All URIs are relative to *https://api.clarivate.com/apis/wos-journals/v1*
 
@@ -23,13 +23,13 @@ The endpoint allows to search, filter, or browse across the Journals content.  T
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import journals_api
-from wos-journals-client-py.model.inline_response200 import InlineResponse200
+import wosjournalsclientpy
+from wosjournalsclientpy.api import journals_api
+from wosjournalsclientpy.model.inline_response200 import InlineResponse200
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -45,7 +45,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     q = "0945-053X" # str | Free-text search by journal name (e.g. *Nature Genetics*), JCR abbreviation (e.g. *NAT GENET*), publisher (e.g. *PUBLIC LIBRARY SCIENCE*) or [ISSN / eISSN code](https://www.issn.org/understanding-the-issn/what-is-an-issn/) (e.g. *1061-4036*)  The search logic is described in the section [Search](#search). (optional)
@@ -64,7 +64,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Search and filter across JCR Journals
         api_response = api_instance.journals_get(q=q, edition=edition, category_code=category_code, jcr_year=jcr_year, jif=jif, jif_percentile=jif_percentile, jif_quartile=jif_quartile, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling JournalsApi->journals_get: %s\n" % e)
 ```
 
@@ -116,13 +116,13 @@ Cited Journal data show how many citations a journal received in the JCR year. C
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import journals_api
-from wos-journals-client-py.model.inline_response2003 import InlineResponse2003
+import wosjournalsclientpy
+from wosjournalsclientpy.api import journals_api
+from wosjournalsclientpy.model.inline_response2003 import InlineResponse2003
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -138,7 +138,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | Journal unique identifier
@@ -151,7 +151,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that cite the journal for the JCR year
         api_response = api_instance.journals_id_cited_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling JournalsApi->journals_id_cited_year_year_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -160,7 +160,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that cite the journal for the JCR year
         api_response = api_instance.journals_id_cited_year_year_get(id, year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling JournalsApi->journals_id_cited_year_year_get: %s\n" % e)
 ```
 
@@ -207,13 +207,13 @@ The response contains:  - Cited **Journal** with the link to WoS Journal API ent
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import journals_api
-from wos-journals-client-py.model.inline_response2004 import InlineResponse2004
+import wosjournalsclientpy
+from wosjournalsclientpy.api import journals_api
+from wosjournalsclientpy.model.inline_response2004 import InlineResponse2004
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -229,7 +229,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | An Journal ID
@@ -242,7 +242,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that were cited by the journal for the JCR year
         api_response = api_instance.journals_id_citing_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling JournalsApi->journals_id_citing_year_year_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -251,7 +251,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that were cited by the journal for the JCR year
         api_response = api_instance.journals_id_citing_year_year_get(id, year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling JournalsApi->journals_id_citing_year_year_get: %s\n" % e)
 ```
 
@@ -298,13 +298,13 @@ A journal entity contains: - basic bibliographic information about the journal, 
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import journals_api
-from wos-journals-client-py.model.inline_response2001 import InlineResponse2001
+import wosjournalsclientpy
+from wosjournalsclientpy.api import journals_api
+from wosjournalsclientpy.model.inline_response2001 import InlineResponse2001
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -320,7 +320,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | Journal unique identifier  Currently an identifier is a JCR abbreviation, where blank spaces are substituted with underscores (e.g. *PLOS ONE* Journal has the ID **PLOS_ONE**)
@@ -330,7 +330,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journal by id
         api_response = api_instance.journals_id_get(id)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling JournalsApi->journals_id_get: %s\n" % e)
 ```
 
@@ -374,13 +374,13 @@ This endpoint returns the information about Journal Citation Report by year.  Th
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import journals_api
-from wos-journals-client-py.model.inline_response2002 import InlineResponse2002
+import wosjournalsclientpy
+from wosjournalsclientpy.api import journals_api
+from wosjournalsclientpy.model.inline_response2002 import InlineResponse2002
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -396,7 +396,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | Journal unique identifier  Currently an identifier is a JCR abbreviation, where blank spaces are substituted with underscores (e.g. *PLOS ONE* Journal has the ID **PLOS_ONE**)
@@ -407,7 +407,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journal metrics for a year
         api_response = api_instance.journals_id_reports_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling JournalsApi->journals_id_reports_year_year_get: %s\n" % e)
 ```
 

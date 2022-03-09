@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response200_metrics_source_metrics import InlineResponse200MetricsSourceMetrics
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response200_metrics_source_metrics import InlineResponse200MetricsSourceMetrics
 
 
 class TestInlineResponse200MetricsSourceMetrics(unittest.TestCase):

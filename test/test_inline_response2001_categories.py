@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2001_categories import InlineResponse2001Categories
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2001_categories import InlineResponse2001Categories
 
 
 class TestInlineResponse2001Categories(unittest.TestCase):

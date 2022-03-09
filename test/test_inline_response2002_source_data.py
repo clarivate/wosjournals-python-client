@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_source_data_articles import InlineResponse2002SourceDataArticles
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_source_data_articles import InlineResponse2002SourceDataArticles
 globals()['InlineResponse2002SourceDataArticles'] = InlineResponse2002SourceDataArticles
-from wos-journals-client-py.model.inline_response2002_source_data import InlineResponse2002SourceData
+from wosjournalsclientpy.model.inline_response2002_source_data import InlineResponse2002SourceData
 
 
 class TestInlineResponse2002SourceData(unittest.TestCase):

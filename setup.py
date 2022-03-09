@@ -10,7 +10,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "wos-journals-client-py"
+NAME = "wosjournalsclientpy"
 VERSION = "1.0.0"
 # To install the library, run the following
 #

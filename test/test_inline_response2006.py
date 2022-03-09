@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2005_category_citation_reports import InlineResponse2005CategoryCitationReports
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2005_category_citation_reports import InlineResponse2005CategoryCitationReports
 globals()['InlineResponse2005CategoryCitationReports'] = InlineResponse2005CategoryCitationReports
-from wos-journals-client-py.model.inline_response2006 import InlineResponse2006
+from wosjournalsclientpy.model.inline_response2006 import InlineResponse2006
 
 
 class TestInlineResponse2006(unittest.TestCase):

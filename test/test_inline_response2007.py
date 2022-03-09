@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_metrics_source_metrics_half_life import InlineResponse2002MetricsSourceMetricsHalfLife
-from wos-journals-client-py.model.inline_response2007_category_data import InlineResponse2007CategoryData
-from wos-journals-client-py.model.inline_response2007_frequency import InlineResponse2007Frequency
-from wos-journals-client-py.model.inline_response2007_immediacy import InlineResponse2007Immediacy
-from wos-journals-client-py.model.inline_response2007_jif import InlineResponse2007Jif
-from wos-journals-client-py.model.inline_response2007_journals import InlineResponse2007Journals
-from wos-journals-client-py.model.inline_response2007_source_data import InlineResponse2007SourceData
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_metrics_source_metrics_half_life import InlineResponse2002MetricsSourceMetricsHalfLife
+from wosjournalsclientpy.model.inline_response2007_category_data import InlineResponse2007CategoryData
+from wosjournalsclientpy.model.inline_response2007_frequency import InlineResponse2007Frequency
+from wosjournalsclientpy.model.inline_response2007_immediacy import InlineResponse2007Immediacy
+from wosjournalsclientpy.model.inline_response2007_jif import InlineResponse2007Jif
+from wosjournalsclientpy.model.inline_response2007_journals import InlineResponse2007Journals
+from wosjournalsclientpy.model.inline_response2007_source_data import InlineResponse2007SourceData
 globals()['InlineResponse2002MetricsSourceMetricsHalfLife'] = InlineResponse2002MetricsSourceMetricsHalfLife
 globals()['InlineResponse2007CategoryData'] = InlineResponse2007CategoryData
 globals()['InlineResponse2007Frequency'] = InlineResponse2007Frequency
@@ -26,7 +26,7 @@ globals()['InlineResponse2007Immediacy'] = InlineResponse2007Immediacy
 globals()['InlineResponse2007Jif'] = InlineResponse2007Jif
 globals()['InlineResponse2007Journals'] = InlineResponse2007Journals
 globals()['InlineResponse2007SourceData'] = InlineResponse2007SourceData
-from wos-journals-client-py.model.inline_response2007 import InlineResponse2007
+from wosjournalsclientpy.model.inline_response2007 import InlineResponse2007
 
 
 class TestInlineResponse2007(unittest.TestCase):

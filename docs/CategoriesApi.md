@@ -1,4 +1,4 @@
-# wos-journals-client-py.CategoriesApi
+# wosjournalsclientpy.CategoriesApi
 
 All URIs are relative to *https://api.clarivate.com/apis/wos-journals/v1*
 
@@ -23,13 +23,13 @@ The endpoint allows to search, filter, or browse across the Categories content. 
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2005 import InlineResponse2005
+import wosjournalsclientpy
+from wosjournalsclientpy.api import categories_api
+from wosjournalsclientpy.model.inline_response2005 import InlineResponse2005
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -45,7 +45,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     q = "q_example" # str | Free-text search by category name.  Search logic is described in the section [Search](#search). (optional)
@@ -60,7 +60,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Search and filter across the journal categories
         api_response = api_instance.categories_get(q=q, edition=edition, jcr_year=jcr_year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling CategoriesApi->categories_get: %s\n" % e)
 ```
 
@@ -108,13 +108,13 @@ The Cited Subject Category table lists journals that cite other journals in the 
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2008 import InlineResponse2008
+import wosjournalsclientpy
+from wosjournalsclientpy.api import categories_api
+from wosjournalsclientpy.model.inline_response2008 import InlineResponse2008
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -130,7 +130,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -143,7 +143,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that cite all journals in the category for the JCR year
         api_response = api_instance.categories_id_cited_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_cited_year_year_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -152,7 +152,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that cite all journals in the category for the JCR year
         api_response = api_instance.categories_id_cited_year_year_get(id, year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_cited_year_year_get: %s\n" % e)
 ```
 
@@ -199,13 +199,13 @@ Category Citing data contains:  - Cited **Journal** with the link to WoS Journal
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2009 import InlineResponse2009
+import wosjournalsclientpy
+from wosjournalsclientpy.api import categories_api
+from wosjournalsclientpy.model.inline_response2009 import InlineResponse2009
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -221,7 +221,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -234,7 +234,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that were cited by all journals from the category for the JCR year
         api_response = api_instance.categories_id_citing_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_citing_year_year_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -243,7 +243,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that were cited by all journals from the category for the JCR year
         api_response = api_instance.categories_id_citing_year_year_get(id, year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_citing_year_year_get: %s\n" % e)
 ```
 
@@ -290,13 +290,13 @@ The category profile provides a comprehensive overview, beginning in 2003, for e
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2006 import InlineResponse2006
+import wosjournalsclientpy
+from wosjournalsclientpy.api import categories_api
+from wosjournalsclientpy.model.inline_response2006 import InlineResponse2006
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -312,7 +312,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID, consisting of a two-letter category code and four-letter edition, separated by **_** (i.e., ***RZ_SSCI*** or ***IP_SCIE***)
@@ -322,7 +322,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get a category
         api_response = api_instance.categories_id_get(id)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_get: %s\n" % e)
 ```
 
@@ -366,13 +366,13 @@ For each JCR year all metrics related to a subject category in the Journal Citat
 * Api Key Authentication (key):
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2007 import InlineResponse2007
+import wosjournalsclientpy
+from wosjournalsclientpy.api import categories_api
+from wosjournalsclientpy.model.inline_response2007 import InlineResponse2007
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
+configuration = wosjournalsclientpy.Configuration(
     host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
@@ -388,7 +388,7 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with wosjournalsclientpy.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -399,7 +399,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get category metrics for a year
         api_response = api_instance.categories_id_reports_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except wosjournalsclientpy.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_reports_year_year_get: %s\n" % e)
 ```
 

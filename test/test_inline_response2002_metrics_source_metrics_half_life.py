@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_metrics_source_metrics_half_life import InlineResponse2002MetricsSourceMetricsHalfLife
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_metrics_source_metrics_half_life import InlineResponse2002MetricsSourceMetricsHalfLife
 
 
 class TestInlineResponse2002MetricsSourceMetricsHalfLife(unittest.TestCase):

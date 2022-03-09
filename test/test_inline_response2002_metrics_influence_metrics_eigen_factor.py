@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_metrics_influence_metrics_eigen_factor import InlineResponse2002MetricsInfluenceMetricsEigenFactor
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_metrics_influence_metrics_eigen_factor import InlineResponse2002MetricsInfluenceMetricsEigenFactor
 
 
 class TestInlineResponse2002MetricsInfluenceMetricsEigenFactor(unittest.TestCase):

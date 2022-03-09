@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2005_category_citation_reports import InlineResponse2005CategoryCitationReports
-from wos-journals-client-py.model.search_match import SearchMatch
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2005_category_citation_reports import InlineResponse2005CategoryCitationReports
+from wosjournalsclientpy.model.search_match import SearchMatch
 globals()['InlineResponse2005CategoryCitationReports'] = InlineResponse2005CategoryCitationReports
 globals()['SearchMatch'] = SearchMatch
-from wos-journals-client-py.model.inline_response2005_hits import InlineResponse2005Hits
+from wosjournalsclientpy.model.inline_response2005_hits import InlineResponse2005Hits
 
 
 class TestInlineResponse2005Hits(unittest.TestCase):

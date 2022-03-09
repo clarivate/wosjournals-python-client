@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2003_citing import InlineResponse2003Citing
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2003_citing import InlineResponse2003Citing
 
 
 class TestInlineResponse2003Citing(unittest.TestCase):

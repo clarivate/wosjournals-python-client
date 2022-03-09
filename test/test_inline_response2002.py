@@ -11,20 +11,20 @@
 import sys
 import unittest
 
-import wos-journals-client-py
-from wos-journals-client-py.model.inline_response2002_journal import InlineResponse2002Journal
-from wos-journals-client-py.model.inline_response2002_journal_data import InlineResponse2002JournalData
-from wos-journals-client-py.model.inline_response2002_journal_profile import InlineResponse2002JournalProfile
-from wos-journals-client-py.model.inline_response2002_metrics import InlineResponse2002Metrics
-from wos-journals-client-py.model.inline_response2002_ranks import InlineResponse2002Ranks
-from wos-journals-client-py.model.inline_response2002_source_data import InlineResponse2002SourceData
+import wosjournalsclientpy
+from wosjournalsclientpy.model.inline_response2002_journal import InlineResponse2002Journal
+from wosjournalsclientpy.model.inline_response2002_journal_data import InlineResponse2002JournalData
+from wosjournalsclientpy.model.inline_response2002_journal_profile import InlineResponse2002JournalProfile
+from wosjournalsclientpy.model.inline_response2002_metrics import InlineResponse2002Metrics
+from wosjournalsclientpy.model.inline_response2002_ranks import InlineResponse2002Ranks
+from wosjournalsclientpy.model.inline_response2002_source_data import InlineResponse2002SourceData
 globals()['InlineResponse2002Journal'] = InlineResponse2002Journal
 globals()['InlineResponse2002JournalData'] = InlineResponse2002JournalData
 globals()['InlineResponse2002JournalProfile'] = InlineResponse2002JournalProfile
 globals()['InlineResponse2002Metrics'] = InlineResponse2002Metrics
 globals()['InlineResponse2002Ranks'] = InlineResponse2002Ranks
 globals()['InlineResponse2002SourceData'] = InlineResponse2002SourceData
-from wos-journals-client-py.model.inline_response2002 import InlineResponse2002
+from wosjournalsclientpy.model.inline_response2002 import InlineResponse2002
 
 
 class TestInlineResponse2002(unittest.TestCase):
