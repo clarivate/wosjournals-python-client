@@ -1,0 +1,86 @@
+# flake8: noqa
+
+# import all models into this package
+# if you have many models here with many references from one model to another this may
+# raise a RecursionError
+# to avoid this, import only the models that you directly need like:
+# from from clarivate.wos_journals.client.model.pet import Pet
+# or import this package, but before doing it, use:
+# import sys
+# sys.setrecursionlimit(n)
+
+from clarivate.wos_journals.client.model.categories import Categories
+from clarivate.wos_journals.client.model.categories_cited import CategoriesCited
+from clarivate.wos_journals.client.model.categories_cited_hits import CategoriesCitedHits
+from clarivate.wos_journals.client.model.categories_cited_journal import CategoriesCitedJournal
+from clarivate.wos_journals.client.model.categories_citing import CategoriesCiting
+from clarivate.wos_journals.client.model.categories_citing_hits import CategoriesCitingHits
+from clarivate.wos_journals.client.model.categories_citing_journal import CategoriesCitingJournal
+from clarivate.wos_journals.client.model.category_citation_reports import CategoryCitationReports
+from clarivate.wos_journals.client.model.category_data import CategoryData
+from clarivate.wos_journals.client.model.category_list import CategoryList
+from clarivate.wos_journals.client.model.category_list_record import CategoryListRecord
+from clarivate.wos_journals.client.model.category_record import CategoryRecord
+from clarivate.wos_journals.client.model.category_reports import CategoryReports
+from clarivate.wos_journals.client.model.category_reports_journals import CategoryReportsJournals
+from clarivate.wos_journals.client.model.category_reports_source_data import CategoryReportsSourceData
+from clarivate.wos_journals.client.model.category_reports_source_data_articles import CategoryReportsSourceDataArticles
+from clarivate.wos_journals.client.model.category_reports_source_data_reviews import CategoryReportsSourceDataReviews
+from clarivate.wos_journals.client.model.cited_data import CitedData
+from clarivate.wos_journals.client.model.cites import Cites
+from clarivate.wos_journals.client.model.citing_data import CitingData
+from clarivate.wos_journals.client.model.frequency import Frequency
+from clarivate.wos_journals.client.model.half_life import HalfLife
+from clarivate.wos_journals.client.model.immediacy import Immediacy
+from clarivate.wos_journals.client.model.impact_metrics import ImpactMetrics
+from clarivate.wos_journals.client.model.influence_metrics import InfluenceMetrics
+from clarivate.wos_journals.client.model.influence_metrics_eigen_factor import InfluenceMetricsEigenFactor
+from clarivate.wos_journals.client.model.jif import Jif
+from clarivate.wos_journals.client.model.jif_aggregate import JifAggregate
+from clarivate.wos_journals.client.model.journal_citation_report import JournalCitationReport
+from clarivate.wos_journals.client.model.journal_data import JournalData
+from clarivate.wos_journals.client.model.journal_history_record import JournalHistoryRecord
+from clarivate.wos_journals.client.model.journal_history_record_iso_title import JournalHistoryRecordIsoTitle
+from clarivate.wos_journals.client.model.journal_history_record_issn import JournalHistoryRecordIssn
+from clarivate.wos_journals.client.model.journal_history_record_name import JournalHistoryRecordName
+from clarivate.wos_journals.client.model.journal_history_record_publisher import JournalHistoryRecordPublisher
+from clarivate.wos_journals.client.model.journal_history_record_publisher1 import JournalHistoryRecordPublisher1
+from clarivate.wos_journals.client.model.journal_history_record_year import JournalHistoryRecordYear
+from clarivate.wos_journals.client.model.journal_history_record_year1 import JournalHistoryRecordYear1
+from clarivate.wos_journals.client.model.journal_history_record_year2 import JournalHistoryRecordYear2
+from clarivate.wos_journals.client.model.journal_history_record_year3 import JournalHistoryRecordYear3
+from clarivate.wos_journals.client.model.journal_list import JournalList
+from clarivate.wos_journals.client.model.journal_list_record import JournalListRecord
+from clarivate.wos_journals.client.model.journal_list_record_journal_citation_reports import JournalListRecordJournalCitationReports
+from clarivate.wos_journals.client.model.journal_list_record_metrics import JournalListRecordMetrics
+from clarivate.wos_journals.client.model.journal_list_record_metrics_impact_metrics import JournalListRecordMetricsImpactMetrics
+from clarivate.wos_journals.client.model.journal_list_record_metrics_source_metrics import JournalListRecordMetricsSourceMetrics
+from clarivate.wos_journals.client.model.journal_list_record_ranks import JournalListRecordRanks
+from clarivate.wos_journals.client.model.journal_list_record_ranks_jci import JournalListRecordRanksJci
+from clarivate.wos_journals.client.model.journal_list_record_ranks_jif import JournalListRecordRanksJif
+from clarivate.wos_journals.client.model.journal_profile import JournalProfile
+from clarivate.wos_journals.client.model.journal_profile_citable_items import JournalProfileCitableItems
+from clarivate.wos_journals.client.model.journal_profile_citations import JournalProfileCitations
+from clarivate.wos_journals.client.model.journal_profile_occurrence_countries import JournalProfileOccurrenceCountries
+from clarivate.wos_journals.client.model.journal_profile_occurrence_organizations import JournalProfileOccurrenceOrganizations
+from clarivate.wos_journals.client.model.journal_record import JournalRecord
+from clarivate.wos_journals.client.model.journal_reports import JournalReports
+from clarivate.wos_journals.client.model.journal_reports_journal import JournalReportsJournal
+from clarivate.wos_journals.client.model.journal_reports_metrics import JournalReportsMetrics
+from clarivate.wos_journals.client.model.journals_cited import JournalsCited
+from clarivate.wos_journals.client.model.journals_cited_hits import JournalsCitedHits
+from clarivate.wos_journals.client.model.journals_cites_journal import JournalsCitesJournal
+from clarivate.wos_journals.client.model.journals_citing import JournalsCiting
+from clarivate.wos_journals.client.model.journals_citing_hits import JournalsCitingHits
+from clarivate.wos_journals.client.model.metadata import Metadata
+from clarivate.wos_journals.client.model.open_access import OpenAccess
+from clarivate.wos_journals.client.model.publisher import Publisher
+from clarivate.wos_journals.client.model.rank_quartile_data import RankQuartileData
+from clarivate.wos_journals.client.model.ranks import Ranks
+from clarivate.wos_journals.client.model.ranks_esi_citations import RanksEsiCitations
+from clarivate.wos_journals.client.model.ranks_jif import RanksJif
+from clarivate.wos_journals.client.model.search_match import SearchMatch
+from clarivate.wos_journals.client.model.source_data import SourceData
+from clarivate.wos_journals.client.model.source_data_articles import SourceDataArticles
+from clarivate.wos_journals.client.model.source_metrics import SourceMetrics
+from clarivate.wos_journals.client.model.source_metrics_citable_items import SourceMetricsCitableItems
