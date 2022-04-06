@@ -1,6 +1,6 @@
-# wos-journals-client-py.CategoriesApi
+# clarivate.wos_journals.client.CategoriesApi
 
-All URIs are relative to *https://api.clarivate.com/apis/wos-journals/v1*
+All URIs are relative to *http://wos-journals-snapshot.cortellis.int.clarivate.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **categories_get**
-> InlineResponse2005 categories_get()
+> CategoryList categories_get()
 
 Search and filter across the journal categories
 
@@ -20,32 +20,22 @@ The endpoint allows to search, filter, or browse across the Categories content. 
 
 ### Example
 
-* Api Key Authentication (key):
+
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2005 import InlineResponse2005
+import clarivate.wos_journals.client
+from clarivate.wos_journals.client.api import categories_api
+from clarivate.wos_journals.client.model.category_list import CategoryList
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
+# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
-    host = "https://api.clarivate.com/apis/wos-journals/v1"
+configuration = clarivate.wos_journals.client.Configuration(
+    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: key
-configuration.api_key['key'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with clarivate.wos_journals.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     q = "q_example" # str | Free-text search by category name.  Search logic is described in the section [Search](#search). (optional)
@@ -60,7 +50,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Search and filter across the journal categories
         api_response = api_instance.categories_get(q=q, edition=edition, jcr_year=jcr_year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except clarivate.wos_journals.client.ApiException as e:
         print("Exception when calling CategoriesApi->categories_get: %s\n" % e)
 ```
 
@@ -77,11 +67,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**CategoryList**](CategoryList.md)
 
 ### Authorization
 
-[key](../README.md#key)
+No authorization required
 
 ### HTTP request headers
 
@@ -90,6 +80,7 @@ Name | Type | Description  | Notes
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -97,7 +88,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **categories_id_cited_year_year_get**
-> InlineResponse2008 categories_id_cited_year_year_get(id, year)
+> CategoriesCited categories_id_cited_year_year_get(id, year)
 
 Get journals that cite all journals in the category for the JCR year
 
@@ -105,32 +96,22 @@ The Cited Subject Category table lists journals that cite other journals in the 
 
 ### Example
 
-* Api Key Authentication (key):
+
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2008 import InlineResponse2008
+import clarivate.wos_journals.client
+from clarivate.wos_journals.client.api import categories_api
+from clarivate.wos_journals.client.model.categories_cited import CategoriesCited
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
+# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
-    host = "https://api.clarivate.com/apis/wos-journals/v1"
+configuration = clarivate.wos_journals.client.Configuration(
+    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: key
-configuration.api_key['key'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with clarivate.wos_journals.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -143,7 +124,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that cite all journals in the category for the JCR year
         api_response = api_instance.categories_id_cited_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except clarivate.wos_journals.client.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_cited_year_year_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -152,7 +133,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that cite all journals in the category for the JCR year
         api_response = api_instance.categories_id_cited_year_year_get(id, year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except clarivate.wos_journals.client.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_cited_year_year_get: %s\n" % e)
 ```
 
@@ -168,11 +149,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**CategoriesCited**](CategoriesCited.md)
 
 ### Authorization
 
-[key](../README.md#key)
+No authorization required
 
 ### HTTP request headers
 
@@ -181,6 +162,7 @@ Name | Type | Description  | Notes
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -188,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **categories_id_citing_year_year_get**
-> InlineResponse2009 categories_id_citing_year_year_get(id, year)
+> CategoriesCiting categories_id_citing_year_year_get(id, year)
 
 Get journals that were cited by all journals from the category for the JCR year
 
@@ -196,32 +178,22 @@ Category Citing data contains:  - Cited **Journal** with the link to WoS Journal
 
 ### Example
 
-* Api Key Authentication (key):
+
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2009 import InlineResponse2009
+import clarivate.wos_journals.client
+from clarivate.wos_journals.client.api import categories_api
+from clarivate.wos_journals.client.model.categories_citing import CategoriesCiting
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
+# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
-    host = "https://api.clarivate.com/apis/wos-journals/v1"
+configuration = clarivate.wos_journals.client.Configuration(
+    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: key
-configuration.api_key['key'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with clarivate.wos_journals.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -234,7 +206,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that were cited by all journals from the category for the JCR year
         api_response = api_instance.categories_id_citing_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except clarivate.wos_journals.client.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_citing_year_year_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -243,7 +215,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get journals that were cited by all journals from the category for the JCR year
         api_response = api_instance.categories_id_citing_year_year_get(id, year, page=page, limit=limit)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except clarivate.wos_journals.client.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_citing_year_year_get: %s\n" % e)
 ```
 
@@ -259,11 +231,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**CategoriesCiting**](CategoriesCiting.md)
 
 ### Authorization
 
-[key](../README.md#key)
+No authorization required
 
 ### HTTP request headers
 
@@ -272,6 +244,7 @@ Name | Type | Description  | Notes
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -279,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **categories_id_get**
-> InlineResponse2006 categories_id_get(id)
+> CategoryRecord categories_id_get(id)
 
 Get a category
 
@@ -287,32 +260,22 @@ The category profile provides a comprehensive overview, beginning in 2003, for e
 
 ### Example
 
-* Api Key Authentication (key):
+
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2006 import InlineResponse2006
+import clarivate.wos_journals.client
+from clarivate.wos_journals.client.api import categories_api
+from clarivate.wos_journals.client.model.category_record import CategoryRecord
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
+# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
-    host = "https://api.clarivate.com/apis/wos-journals/v1"
+configuration = clarivate.wos_journals.client.Configuration(
+    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: key
-configuration.api_key['key'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with clarivate.wos_journals.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID, consisting of a two-letter category code and four-letter edition, separated by **_** (i.e., ***RZ_SSCI*** or ***IP_SCIE***)
@@ -322,7 +285,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get a category
         api_response = api_instance.categories_id_get(id)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except clarivate.wos_journals.client.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_get: %s\n" % e)
 ```
 
@@ -335,11 +298,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**CategoryRecord**](CategoryRecord.md)
 
 ### Authorization
 
-[key](../README.md#key)
+No authorization required
 
 ### HTTP request headers
 
@@ -348,6 +311,7 @@ Name | Type | Description  | Notes
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -355,7 +319,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **categories_id_reports_year_year_get**
-> InlineResponse2007 categories_id_reports_year_year_get(id, year)
+> CategoryReports categories_id_reports_year_year_get(id, year)
 
 Get category metrics for a year
 
@@ -363,32 +327,22 @@ For each JCR year all metrics related to a subject category in the Journal Citat
 
 ### Example
 
-* Api Key Authentication (key):
+
 ```python
 import time
-import wos-journals-client-py
-from wos-journals-client-py.api import categories_api
-from wos-journals-client-py.model.inline_response2007 import InlineResponse2007
+import clarivate.wos_journals.client
+from clarivate.wos_journals.client.api import categories_api
+from clarivate.wos_journals.client.model.category_reports import CategoryReports
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
+# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = wos-journals-client-py.Configuration(
-    host = "https://api.clarivate.com/apis/wos-journals/v1"
+configuration = clarivate.wos_journals.client.Configuration(
+    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: key
-configuration.api_key['key'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with wos-journals-client-py.ApiClient(configuration) as api_client:
+with clarivate.wos_journals.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -399,7 +353,7 @@ with wos-journals-client-py.ApiClient(configuration) as api_client:
         # Get category metrics for a year
         api_response = api_instance.categories_id_reports_year_year_get(id, year)
         pprint(api_response)
-    except wos-journals-client-py.ApiException as e:
+    except clarivate.wos_journals.client.ApiException as e:
         print("Exception when calling CategoriesApi->categories_id_reports_year_year_get: %s\n" % e)
 ```
 
@@ -413,11 +367,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**CategoryReports**](CategoryReports.md)
 
 ### Authorization
 
-[key](../README.md#key)
+No authorization required
 
 ### HTTP request headers
 
@@ -426,6 +380,7 @@ Name | Type | Description  | Notes
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
