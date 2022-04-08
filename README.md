@@ -1,4 +1,4 @@
-# clarivate-wos-journals-python-client
+# Web of Science Journals API Python client
 This API provides journal-level metadata and metrics for all journals in the Journal Citation Reports™ covered in the Web of Science Core Collection, including the Journal Impact Factor™ and other new metrics. Integrate journal data into your internal systems or retrieve journal indicators for bibliometrics studies.
 
 ## Resources
@@ -10,7 +10,7 @@ The API is available on the [Clarivate Developer Portal](https://developer.clari
 All requests require authentication with an API Key authentication flow. For more details, check the [Guide](https://developer.clarivate.com/help/api-access#key_access).
 
 ## API Client Libraries
-The current languages/frameworks are supported: [Python](https://github.com/Clarivate-SAR/wosjournals-py-client) | [Java](https://github.com/Clarivate-SAR/wosjournals_java_client) | [Javascript](https://github.com/Clarivate-SAR/wosjournals_javascript_client)
+The current languages/frameworks are supported: [Python](https://github.com/clarivate/wosjournals-python-client) | [Java](https://github.com/clarivate/wosjournals-java-client) | [Javascript](https://github.com/clarivate/wosjournals-javascript-client)
 
 ## Content
 You can learn more about content at [Journal Citation Reports™ Product page](https://clarivate.com/webofsciencegroup/solutions/journal-citation-reports/), or in the [documentation](http://jcr.help.clarivate.com/Content/home.htm).
