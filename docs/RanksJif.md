@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **category** | **str** |  | [optional] 
 **edition** | **str** |  | [optional] 
-**_self** | **str** |  | [optional] 
+**self** | **str** |  | [optional] 
 **rank** | **str** |  | [optional] 
 **quartile** | **str** |  | [optional] 
 **jif_percentile** | **float** |  | [optional] 

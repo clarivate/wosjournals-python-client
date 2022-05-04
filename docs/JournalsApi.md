@@ -1,6 +1,6 @@
 # clarivate.wos_journals.client.JournalsApi
 
-All URIs are relative to *http://wos-journals-snapshot.cortellis.int.clarivate.com*
+All URIs are relative to *https://api.clarivate.com/apis/wos-journals/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**journals_id_cited_year_year_get**](JournalsApi.md#journals_id_cited_year_year_get) | **GET** /journals/{id}/cited/year/{year} | Get journals that cite the journal for the JCR year
 [**journals_id_citing_year_year_get**](JournalsApi.md#journals_id_citing_year_year_get) | **GET** /journals/{id}/citing/year/{year} | Get journals that were cited by the journal for the JCR year
 [**journals_id_get**](JournalsApi.md#journals_id_get) | **GET** /journals/{id} | Get journal by id
-[**journals_id_history_get**](JournalsApi.md#journals_id_history_get) | **GET** /journals/{id}/history | Get journal history by id
+[**journals_id_history_get**](JournalsApi.md#journals_id_history_get) | **GET** /journals/{id}/history | Get journal changes by id
 [**journals_id_reports_year_year_get**](JournalsApi.md#journals_id_reports_year_year_get) | **GET** /journals/{id}/reports/year/{year} | Get journal metrics for a year
 
 
@@ -21,6 +21,7 @@ The endpoint allows to search, filter, or browse across the Journals content.  T
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -28,15 +29,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import journals_api
 from clarivate.wos_journals.client.model.journal_list import JournalList
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     q = "0945-053X" # str | Free-text search by journal name (e.g. *Nature Genetics*), JCR abbreviation (e.g. *NAT GENET*), publisher (e.g. *PUBLIC LIBRARY SCIENCE*) or [ISSN / eISSN code](https://www.issn.org/understanding-the-issn/what-is-an-issn/) (e.g. *1061-4036*)  The search logic is described in the section [Search](#search). (optional)
@@ -86,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -111,6 +122,7 @@ Cited Journal data show how many citations a journal received in the JCR year. C
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -118,15 +130,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import journals_api
 from clarivate.wos_journals.client.model.journals_cited import JournalsCited
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | Journal unique identifier
@@ -168,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -193,6 +215,7 @@ The response contains:  - Cited **Journal** with the link to WoS Journal API ent
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -200,15 +223,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import journals_api
 from clarivate.wos_journals.client.model.journals_citing import JournalsCiting
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | An Journal ID
@@ -250,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -275,6 +308,7 @@ A journal entity contains: - basic bibliographic information about the journal, 
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -282,15 +316,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import journals_api
 from clarivate.wos_journals.client.model.journal_record import JournalRecord
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | Journal unique identifier  Currently an identifier is a JCR abbreviation, where blank spaces are substituted with underscores (e.g. *PLOS ONE* Journal has the ID **PLOS_ONE**)
@@ -317,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -336,12 +380,13 @@ No authorization required
 # **journals_id_history_get**
 > JournalHistoryRecord journals_id_history_get(id)
 
-Get journal history by id
+Get journal changes by id
 
-TBD
+Historical changes a journal by ID
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -349,22 +394,32 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import journals_api
 from clarivate.wos_journals.client.model.journal_history_record import JournalHistoryRecord
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | Journal unique identifier  Currently an identifier is a JCR abbreviation, where blank spaces are substituted with underscores (e.g. *PLOS ONE* Journal has the ID **PLOS_ONE**)
 
     # example passing only required values which don't have defaults set
     try:
-        # Get journal history by id
+        # Get journal changes by id
         api_response = api_instance.journals_id_history_get(id)
         pprint(api_response)
     except clarivate.wos_journals.client.ApiException as e:
@@ -384,7 +439,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -409,6 +464,7 @@ This endpoint returns the information about Journal Citation Report by year.  Th
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -416,15 +472,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import journals_api
 from clarivate.wos_journals.client.model.journal_reports import JournalReports
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     id = "PLOS_ONE" # str | Journal unique identifier  Currently an identifier is a JCR abbreviation, where blank spaces are substituted with underscores (e.g. *PLOS ONE* Journal has the ID **PLOS_ONE**)
@@ -453,7 +519,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 

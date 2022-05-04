@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **year** | **int** | Report year | [optional] 
+**suppressed** | **bool** | Suppressed Title. Read more at in [JCR Help](https://jcr.help.clarivate.com/Content/title-suppressions.htm) | [optional] 
 **journal** | [**JournalReportsJournal**](JournalReportsJournal.md) |  | [optional] 
 **metrics** | [**JournalReportsMetrics**](JournalReportsMetrics.md) |  | [optional] 
 **ranks** | [**Ranks**](Ranks.md) |  | [optional] 

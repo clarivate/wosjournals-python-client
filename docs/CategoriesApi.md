@@ -1,6 +1,6 @@
 # clarivate.wos_journals.client.CategoriesApi
 
-All URIs are relative to *http://wos-journals-snapshot.cortellis.int.clarivate.com*
+All URIs are relative to *https://api.clarivate.com/apis/wos-journals/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,6 +20,7 @@ The endpoint allows to search, filter, or browse across the Categories content. 
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -27,15 +28,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import categories_api
 from clarivate.wos_journals.client.model.category_list import CategoryList
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     q = "q_example" # str | Free-text search by category name.  Search logic is described in the section [Search](#search). (optional)
@@ -71,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -96,6 +107,7 @@ The Cited Subject Category table lists journals that cite other journals in the 
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -103,15 +115,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import categories_api
 from clarivate.wos_journals.client.model.categories_cited import CategoriesCited
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -153,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -178,6 +200,7 @@ Category Citing data contains:  - Cited **Journal** with the link to WoS Journal
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -185,15 +208,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import categories_api
 from clarivate.wos_journals.client.model.categories_citing import CategoriesCiting
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -235,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -260,6 +293,7 @@ The category profile provides a comprehensive overview, beginning in 2003, for e
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -267,15 +301,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import categories_api
 from clarivate.wos_journals.client.model.category_record import CategoryRecord
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID, consisting of a two-letter category code and four-letter edition, separated by **_** (i.e., ***RZ_SSCI*** or ***IP_SCIE***)
@@ -302,7 +346,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 
@@ -327,6 +371,7 @@ For each JCR year all metrics related to a subject category in the Journal Citat
 
 ### Example
 
+* Api Key Authentication (key):
 
 ```python
 import time
@@ -334,15 +379,25 @@ import clarivate.wos_journals.client
 from clarivate.wos_journals.client.api import categories_api
 from clarivate.wos_journals.client.model.category_reports import CategoryReports
 from pprint import pprint
-# Defining the host is optional and defaults to http://wos-journals-snapshot.cortellis.int.clarivate.com
+# Defining the host is optional and defaults to https://api.clarivate.com/apis/wos-journals/v1
 # See configuration.py for a list of all supported configuration parameters.
 configuration = clarivate.wos_journals.client.Configuration(
-    host = "http://wos-journals-snapshot.cortellis.int.clarivate.com"
+    host = "https://api.clarivate.com/apis/wos-journals/v1"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: key
+configuration.api_key['key'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with clarivate.wos_journals.client.ApiClient() as api_client:
+with clarivate.wos_journals.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = categories_api.CategoriesApi(api_client)
     id = "RU_SCIE" # str | Category ID
@@ -371,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[key](../README.md#key)
 
 ### HTTP request headers
 

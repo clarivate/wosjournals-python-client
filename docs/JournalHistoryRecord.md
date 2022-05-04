@@ -1,6 +1,6 @@
 # JournalHistoryRecord
 
-TBD
+Journal History record
 
 ## Properties
 Name | Type | Description | Notes

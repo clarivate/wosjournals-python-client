@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | Category unique identifier | [optional] 
-**_self** | **str** | Link to the category entity | [optional] 
+**self** | **str** | Link to the category entity | [optional] 
 **matches** | [**[SearchMatch]**](SearchMatch.md) | Search string matches across category names | [optional] 
 **name** | **str** | Category name | [optional] 
 **edition** | **str** | Category edition (SCIE/SSCI) | [optional] 

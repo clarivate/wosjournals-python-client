@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | Journal unique identifier | [optional] 
-**_self** | **str** | Link to the journal entity | [optional] 
+**self** | **str** | Link to the journal entity | [optional] 
 **matches** | [**[SearchMatch]**](SearchMatch.md) |  | [optional] 
 **name** | **str** | Journal full name | [optional] 
 **categories** | [**Categories**](Categories.md) |  | [optional] 
